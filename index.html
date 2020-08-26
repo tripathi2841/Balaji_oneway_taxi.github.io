@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+#div1{
+width:300px;
+height:300px;
+margin:0 auto;
+border-radius:50%;
+background-color:;
+animation-name:sample;
+animation-duration:4s;
+animation-iteration-count:infinite;
+color:white;
+
+}
+@keyframes sample{
+0% {background-color:white;}
+
+100%{background-color:tomato;}
+}
+#div2{
+width:270px;
+height:120px;
+background-color:yellow;
+border:8px;
+border-color:orange;
+}
+a{
+text-decoration:none;
+}
+a:hover{
+text-decoration:underline;
+}
+#div3{
+width:1550px;
+height:40px;
+animation-name:example;
+animation-duration:4s;
+animation-iteration-count:infinite;
+
+background-color:orange;
+}
+@keyframes example{
+0% {background-color:#85929E ;}
+50%{background-color:yellow;}
+100%{background-color:#ff00bf;}
+} 
+.div4{
+background-color:#F4D03F;
+margin-left:30px;
+}
+
+
+body{
+padding:0px;
+margin:0px;
+}
+
+
+.header{
+background-color:#ee5253;
+width:100%;
+height:60px;
+position:fixed;
+z-index:10;
+}
+
+.main{
+height:100%;
+margin-top:60px;
+padding:10px 50px;
+}
+#sidebarMenu{
+height:100%;
+position:fixed;
+left:0;
+top:0;
+width:250px;
+margin-top:60px;
+background-color:#2e86de;
+transform: translateX(-250px);
+transition: transform 250ms ease-in-out
+}
+#openSidebarMenu:checked ~ #sidebarMenu{
+transform: translateX(0px);
+}
+.menu{
+list-style:none;
+padding:0;
+margin:0;
+}
+.menu li{
+color: #fff;
+border-bottom: 1px solid rgba(255,255,255,0.10);
+}
+.menu li a{
+color:#fff;
+display:black;
+text-decoration:none;
+text-transform:uppercase;
+padding:20px;
+}
+.sidebarIconToggle{
+width:20px;
+height:20px;
+position:absolute;
+z-index:20;
+top:22px;
+left:15px;
+cursor:pointer;
+}
+.spinner{
+height: 3px;
+background-color:#fff;
+transition: all 0.3s;
+}
+.spinner.middle,
+.spinner.bottom{
+margin-top: 3px;
+}
+#openSidebarMenu:checked ~.sidebarIconToggle > .spinner.middle{
+opacity: 0;
+}
+#openSidebarMenu:checked ~.sidebarIconToggle > .spinner.top{
+transform: rotate(135deg);
+margin-top:8px;
+}
+#openSidebarMenu:checked ~.sidebarIconToggle > .spinner.bottom{
+transform: rotate(-135deg);
+margin-top:-9px;
+}
+
+</style>
+</head>
+<body bgcolor="#566573 " onload=set_time()>
+<div class="header"></div>
+<input type="checkbox" id="openSidebarMenu">
+<label for="openSidebarMenu" class="sidebarIconToggle">
+<div class="spinner top"></div>
+<div class="spinner middle"></div>
+<div class="spinner bottom"></div>
+</label>
+<div id="sidebarMenu">
+<ul class="menu">
+<li><a href="home_01.html"><h2  style="text-align:center;">Home</h2></a></li>
+<li><a href="contact_us.html"><h2  style="text-align:center;">Contact_us</h2></a></li>
+
+</ul>
+</div>
+<br><br><br>
+<table width="100%" style="background-color:#F0FFFF;">
+<tr>
+<td><h2 style="color:orange;font-size:50px;"><i>Full sanitized <br>Balaji_taxi</i></h2></td>
+<td><div id="div1"><center><br><br><br><h1>Balaji_taxi<br><img src="images/car_01.jfif" width="150px" height="100px"></h2></center></div></td>
+<td><h2 style="color:orange;font-size:50px;"><i>Available</i></h2><img src="images/available.jfif" style="margin-bottom:20px;"></td>
+
+</tr>
+</table>
+<div id="div3"><center><h2 style="color:white;">Rate of Balaji_taxi based on distance(price/km)</h2></center></div>
+<br>
+<div>
+<center><img src="images/car_02.jfif" id="data" width="400px" height="250px"></center>
+</div>
+<script>
+var start=1;
+function set_time()
+{
+setInterval(image_show,1500);
+}
+function image_show()
+{
+   var image_data;
+   if(start==1)
+   {
+   image_data="images/car_03.jfif";
+   }
+   else if(start==2)
+   {
+   image_data="images/car_04.jfif";
+   }
+   else if(start==3)
+   {
+   image_data="images/car_05.jfif";
+   }
+   else if(start==4)
+   {
+   image_data="images/car_01.jfif";
+   }
+  else if(start==5)
+   {
+   image_data="images/car_06.jfif";
+   }
+   else if(start==6)
+   {
+   image_data="images/car_07.jfif";
+   }
+   else if(start==7)
+   {
+   image_data="images/car_08.jfif";
+   }
+   else if(start==8)
+   {
+   image_data="images/car_09.jfif";
+   }
+   else if(start==9)
+   {
+   image_data="images/car_10.jfif";
+   }
+   else if(start==10)
+   {
+   image_data="images/car_11.jfif";
+   }
+   else if(start==11)
+   {
+   image_data="images/car_12.jfif";
+   }
+   else if(start==12)
+   {
+   image_data="images/car_13.jfif";
+   }
+   else if(start==13)
+   {
+   image_data="images/car_14.jfif";
+   }
+   else if(start==14)
+   {
+   image_data="images/car_15.jfif";
+   }
+   else if(start==15)
+   {
+   image_data="images/car_16.jfif";
+   }
+   
+   else if(start==16)
+   {
+   image_data="images/car_17.jfif";
+   }
+   else if(start==17)
+   {
+   image_data="images/car_18.jfif";
+   }
+   else if(start==18)
+   {
+   image_data="images/car_19.jfif";
+   }
+   else if(start==19)
+   {
+   image_data="images/car_20.jfif";
+   }
+   else if(start==20)
+   {
+   image_data="images/car_05.jfif";
+   }
+   else if(start==21)
+   {
+   image_data="images/car_01.jfif";
+   }
+  else if(start==22)
+   {
+   image_data="images/car_06.jfif";
+   }
+   else if(start==23)
+   {
+   image_data="images/car_07.jfif";
+   }
+   else if(start==24)
+   {
+   image_data="images/car_08.jfif";
+   }
+   else if(start==25)
+   {
+   image_data="images/car_09.jfif";
+   }
+   else if(start==26)
+   {
+   image_data="images/car_10.jfif";
+   }
+   else if(start==27)
+   {
+   image_data="images/car_11.jfif";
+   }
+   else if(start==28)
+   {
+   image_data="images/car_12.jfif";
+   }
+   else if(start==29)
+   {
+   image_data="images/car_13.jfif";
+   }
+   else if(start==30)
+   {
+   image_data="images/car_14.jfif";
+   }
+   else if(start==31)
+   {
+   image_data="images/car_15.jfif";
+   }
+   else if(start==32)
+   {
+   image_data="images/car_16.jfif";
+   }
+   
+   else if(start==33)
+   {
+   image_data="images/car_17.jfif";
+   }
+   else if(start==34)
+   {
+   image_data="images/car_18.jfif";
+   }
+   else if(start==35)
+   {
+   image_data="images/car_19.jfif";
+   }
+   else if(start==36)
+   {
+   image_data="images/car_20.jfif";
+   }
+   
+   
+   else{
+   
+   start=0;
+   }
+   document.getElementById("data").src=""+image_data;
+   start++;
+}
+
+
+
+
+</script>
+<center><h1 style="color:white;"><i>We Provide Outstaion Cabs from Delhi to all the Places of India.</i></h1></center>
+<center><h1 style="color:white;"><i>While Booking please fill only this Email Address - raj721718@gmail.com</i></h1></center>
+<center><button style="background-color:yellow;"><a href="book.html" title="Book Your Cab...."><h1>Book your cab</h1></a></button></center>
+<center><p style="color:Orange;font-size:50px;text-decoration:underline;"><b>Our Fleet</b></p></center>
+<table width="100%" style="padding:10px;">
+<tr>
+<td><center><h1 style="color:white;"><i>Maruti Alto</i></h1><h2 style="color:orange;">Rs9 Per KM</h2><img src="images/car_21.jfif"></center></td>
+
+<td><center><h1 style="color:white"><i>Toyoto Etios</i></h1><h2 style="color:orange">Rs11 Per KM</h2><img src="images/car_22.jfif"></center></td>
+<td><center><h1 style="color:white"><i>Swift D-zire</i></h1><h2 style="color:orange">Rs11 Per KM</h2><img src="images/car_24.jfif"></center></td>
+
+</tr>
+</table>
+<table width="100%" style="padding:10px;">
+<tr>
+<td><center><h1 style="color:white;"><i>Maruti Ertiga</i></h1><h2 style="color:orange;">Rs14 Per KM</h2><img src="images/car_25.jfif"></center></td>
+
+<td><center><h1 style="color:white"><i>Marazzo</i></h1><h2 style="color:orange">Rs15 Per KM</h2><img src="images/car_26.jfif"></center></td>
+<td><center><h1 style="color:white"><i>Innova Crysta</i></h1><h2 style="color:orange">Rs16 Per KM</h2><img src="images/car_27.jfif"></center></td>
+
+</tr>
+</table>
+<p style="color:red;font-size:40px;"><b>About us:</b></p>
+<h2 style="color:white;"><i>Balaji_taxi is one of the old and trusted name in Delhi. We provide cheap and best best cab services from Delhi to Chandigarh,Delhi to Manali,Delhi to Shimla,Delhi to Punjab,Delhi to Himachal Pradesh,Delhi to Uttrakhand,Delhi to Rajasthan,and many more places.<br>Feel free to book your next trip with Balaji_taxi. We are always at your disposal. </i></h2>
+<div width="100%" style="background-color:#F4D03F ;">
+<center><h1>Zero Cancellation</h1><h2 style="color:white;">Enjoy zero cancellation charges, if booking is cancelled 6 hours prior to departure time.</h2><img src="images/snipp_01.png"></center>
+<center><h1>Price Transparency</h1><h2 style="color:white;">No HIDDEN Charges</h2><img src="images/snipp_02.png"></center>
+<center><h1>One Way</h1><h2 style="color:white;">Why pay for round trip, when you can hire a cab for one way trip</h2><img src="images/snipp_04.png"></center>
+
+</div>
+<center><p style="font-size:40px;color:white;"><b>Always available 24*7</b></p><img src="images/call_24.jfif"><h1 style="color:red;"><i>For any querry please move towards the contact_us</i></h1></center>
+</body>
+</html>
